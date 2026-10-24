@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vfvchem-calc3d"
+version = "0.0.0"
+description = "3D post-processing helpers for VFVChem FVM results"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "meshio",
+    "pyvista",
+    "matplotlib",
+    "pillow",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pyright]
+extraPaths = ["src"]
